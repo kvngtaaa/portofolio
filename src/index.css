@@ -1,0 +1,173 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* -------------------------------------------------------------
+   DESIGN SYSTEM FOR KEVIN GENTA ALEXANDER PORTFOLIO
+   Per PRD v1.1: Clean, structured, brutalist hero, neon green agritech accent
+   ------------------------------------------------------------- */
+
+:root {
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-heading: 'Space Grotesk', 'Inter', sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+
+  /* Default Dark Mode (Obsidian Neutral) */
+  --background: #090a0d;
+  --foreground: #f8fafc;
+  --card-bg: rgba(18, 20, 26, 0.7);
+  --border-subtle: rgba(255, 255, 255, 0.08);
+
+  /* Neon Green / Agritech Accents */
+  --accent-green: #22c55e;
+  --accent-neon: #4ade80;
+  --accent-neon-glow: rgba(74, 222, 128, 0.25);
+}
+
+html.light {
+  --background: #fcfcfd;
+  --foreground: #09090b;
+  --card-bg: rgba(255, 255, 255, 0.9);
+  --border-subtle: rgba(0, 0, 0, 0.08);
+
+  --accent-green: #16a34a;
+  --accent-neon: #15803d;
+  --accent-neon-glow: rgba(34, 197, 94, 0.2);
+}
+
+@layer base {
+  html {
+    font-family: var(--font-sans);
+    background-color: var(--background);
+    color: var(--foreground);
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+  }
+  
+  body {
+    background-color: var(--background);
+    color: var(--foreground);
+    line-height: 1.6;
+    min-height: 100vh;
+    position: relative;
+    overflow-x: hidden;
+    transition: background-color 0.25s ease, color 0.25s ease;
+  }
+  
+  /* Ensure all sections stay within viewport width without triggering scrollbar overflow */
+  section, footer, header {
+    max-width: 100%;
+  }
+  
+  /* Typography */
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+  }
+  
+  .font-mono {
+    font-family: var(--font-mono);
+  }
+}
+
+/* Shiny Text with Green Specular Shimmer */
+@keyframes shinyText {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+.shiny-text {
+  background: linear-gradient(
+    120deg,
+    rgba(255, 255, 255, 0.3) 20%,
+    rgba(255, 255, 255, 1) 50%,
+    rgba(74, 222, 128, 0.9) 70%,
+    rgba(255, 255, 255, 0.3) 90%
+  );
+  background-size: 200% 100%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shinyText 4.5s infinite linear;
+}
+
+html.light .shiny-text {
+  background: linear-gradient(
+    120deg,
+    rgba(15, 23, 42, 0.5) 20%,
+    rgba(22, 163, 74, 1) 50%,
+    rgba(15, 23, 42, 0.5) 80%
+  );
+  background-size: 200% 100%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shinyText 4.5s infinite linear;
+}
+
+/* ReactBits StarBorder Keyframes */
+@keyframes starMovementBottom {
+  0% {
+    transform: translate(0%, 0%);
+    opacity: 0.9;
+  }
+  50% {
+    transform: translate(-100%, 0%);
+    opacity: 0.3;
+  }
+  100% {
+    transform: translate(0%, 0%);
+    opacity: 0.9;
+  }
+}
+
+@keyframes starMovementTop {
+  0% {
+    transform: translate(0%, 0%);
+    opacity: 0.9;
+  }
+  50% {
+    transform: translate(100%, 0%);
+    opacity: 0.3;
+  }
+  100% {
+    transform: translate(0%, 0%);
+    opacity: 0.9;
+  }
+}
+
+.animate-star-movement-bottom {
+  animation: starMovementBottom 5s ease-in-out infinite alternate;
+}
+
+.animate-star-movement-top {
+  animation: starMovementTop 5s ease-in-out infinite alternate;
+}
+
+/* Custom Sleek Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(148, 163, 184, 0.25);
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(74, 222, 128, 0.6);
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+  width: 4px;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 4px;
+}
