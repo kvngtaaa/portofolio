@@ -3,7 +3,7 @@ export const portfolioData = {
     name: "KEVIN GENTA ALEXANDER",
     shortName: "Kevin Genta",
     role: "Full-Stack Developer & Certified System Analyst",
-    tagline: "Certified System Analyst and Full-Stack Developer focused on building reliable web systems.",
+    tagline: "BNSP-Certified System Analyst & Full-Stack Engineer with cross-disciplinary expertise in Web Development and Quality Assurance. I bridge complex business needs into scalable, production-ready enterprise applications using Laravel, React.js, Docker, and smart system integrations (AI/ML & IoT).",
     location: "Bandung, Indonesia",
     fullLocation: "Bandung, West Java, Indonesia",
     status: "Open to full-time roles",
@@ -50,6 +50,8 @@ export const portfolioData = {
       period: "Jan 2026 — Aug 2026",
       location: "Bandung, Indonesia",
       featured: true,
+      image: "/assets/aga-web.png",
+      previewUrl: "aga-smartfarming.id",
       tagline:
         "Full-stack smart farming decision support platform combining real-time environmental monitoring with LLM and RAG agronomic recommendations.",
       points: [
@@ -60,8 +62,8 @@ export const portfolioData = {
       ],
       stack: ["Laravel", "React.js", "Tailwind CSS", "MySQL", "LLM / RAG", "RESTful API"],
       links: {
-        demo: "#",
-        repo: "#"
+        demo: "https://github.com/kvngtaaa",
+        repo: "https://github.com/kvngtaaa"
       }
     },
     {
@@ -72,6 +74,8 @@ export const portfolioData = {
       period: "Dec 2025 — Mar 2026",
       location: "Bandung, Indonesia",
       featured: true,
+      image: "/assets/agrinova-web.png",
+      previewUrl: "agrinova.iot.app",
       tagline:
         "Front-end smart farming ecosystem integrating ESP32 sensor hardware telemetry with real-time AI agronomy guidance.",
       points: [
@@ -82,8 +86,8 @@ export const portfolioData = {
       ],
       stack: ["ESP32", "IoT", "LLM", "React.js", "Tailwind CSS", "WebSockets", "REST API"],
       links: {
-        demo: "#",
-        repo: "#"
+        demo: "https://github.com/kvngtaaa",
+        repo: "https://github.com/kvngtaaa"
       }
     },
     {
@@ -94,6 +98,8 @@ export const portfolioData = {
       period: "Aug 2025 — Oct 2025",
       location: "Bekasi, Indonesia",
       featured: false,
+      image: "/assets/trigobalindo-web.png",
+      previewUrl: "trigobalindo.id",
       tagline:
         "Responsive corporate web presence designed and engineered from scratch to amplify digital brand authority.",
       points: [
@@ -103,8 +109,8 @@ export const portfolioData = {
       ],
       stack: ["React.js", "Tailwind CSS", "Node.js", "Vercel", "UI/UX Design"],
       links: {
-        demo: "#",
-        repo: "#"
+        demo: "https://github.com/kvngtaaa",
+        repo: "https://github.com/kvngtaaa"
       }
     },
     {
@@ -115,6 +121,8 @@ export const portfolioData = {
       period: "Jul 2024 — Aug 2025",
       location: "Bandung, Indonesia",
       featured: false,
+      image: "/assets/transtrack-web.png",
+      previewUrl: "app.transtrack.id",
       tagline:
         "Rigorous quality assurance, test case execution, and defect lifecycle management for mission-critical logistics software.",
       points: [
@@ -124,8 +132,8 @@ export const portfolioData = {
       ],
       stack: ["Manual Testing", "Automated QA", "Jira", "Postman", "Regression Testing", "Fleet Telematics"],
       links: {
-        demo: "#",
-        repo: "#"
+        demo: "https://github.com/kvngtaaa",
+        repo: "https://github.com/kvngtaaa"
       }
     }
   ],
